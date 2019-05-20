@@ -26,13 +26,13 @@ def printResult(chosenLayer, response, score, i):
 
 def createOSIModel():
     return [
-        Layer(1, "Physical", "Deals with the physical characteristics of the transmission medium (hardware)"),
-        Layer(2, "Data", "Provides the functional and procedural means to transfer data between network entities"),
-        Layer(3, "Network", "Defines how routing works and how routes are learned so that the packets can be delivered"),
-        Layer(4, "Transport", "Regulates information flow to ensure end-to-end connectivity between host applications reliably and accurately"),
-        Layer(5, "Session", "Defines how to start, control and end conversations between applications using dialogue control"),
-        Layer(6, "Presentation", "Ensures that the information that the application layer of one system sends out is readable by the application layer of another system"),
-        Layer(7, "Application", "Provides network services to the user’s applications. Synchronizes and establishes agreement on procedures for error recovery and control of data integrity")
+        Layer(1, "Physical", "Send data on to the physical wire"),
+        Layer(2, "Data", "Reads the MAC address from the data packet"),
+        Layer(3, "Network", "Reads the IP address from the packet"),
+        Layer(4, "Transport", "Responsible for the transport protocol and error handling"),
+        Layer(5, "Session", "Establishes/ends connections between two hosts"),
+        Layer(6, "Presentation", "Formats the data so that it can be viewed by the user. Encrypt and decrypt."),
+        Layer(7, "Application", "Services that are used with end user applications")
     ]
 
 def main():
