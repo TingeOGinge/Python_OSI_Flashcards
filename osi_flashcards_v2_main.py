@@ -9,9 +9,10 @@ def askQuestion(chosenLayer):
     if random() < 0.5:        
         userAnswer = input("Which layer of the OSI model does the following " +
             "sentence describe\n'{0}'\n".format(chosenLayer.getDescription()))
-    else:
-        userAnswer = input("The name of OSI layer #{0} is the ____ layer \n".format(
-                        chosenLayer.getNumber()))
+        return userAnswer
+    
+    userAnswer = input("The name of OSI layer #{0} is the ____ layer \n".format(
+                    chosenLayer.getNumber()))
     return userAnswer
 
 def checkAnswer(chosenLayer, userAnswer):
